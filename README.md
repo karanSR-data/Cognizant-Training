@@ -1,7 +1,5 @@
 # Cognizant-Training
 
-# Cognizant Training 2026
-
 Welcome to my Cognizant Training Repository. This repository serves as a centralized record of my learning journey throughout the Cognizant training program.
 
 It contains weekly notes, practice programs, assignments, and hands-on implementations covering software development concepts, Java and Spring technologies, databases, design patterns, testing frameworks, and other topics introduced during the training.
