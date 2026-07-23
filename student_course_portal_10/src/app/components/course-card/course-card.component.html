@@ -1,0 +1,7 @@
+<div class="card">
+  <h3>{{ course.name }}</h3>
+  <p class="meta">{{ course.code }} — {{ course.credits }} credits</p>
+  <span class="badge" [class]="course.gradeStatus">{{ course.gradeStatus }}</span>
+
+  <button (click)="onEnrollClick()">Enroll</button>
+</div>

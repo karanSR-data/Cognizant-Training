@@ -1,0 +1,8 @@
+{
+  "courses": [
+    { "id": 1, "title": "Angular Fundamentals", "instructor": "Priya Sharma", "credits": 4 },
+    { "id": 2, "title": "RxJS Deep Dive", "instructor": "Rahul Verma", "credits": 3 },
+    { "id": 3, "title": "TypeScript Essentials", "instructor": "Ananya Rao", "credits": 2 },
+    { "id": 4, "title": "NgRx State Management", "instructor": "Karan Mehta", "credits": 3 }
+  ]
+}

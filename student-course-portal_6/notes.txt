@@ -1,0 +1,23 @@
+angular.json        - Workspace config: build/serve/test settings, file paths, budgets, styles/scripts to include.
+tsconfig.json        - Root TypeScript compiler config shared by the whole workspace.
+tsconfig.app.json    - TypeScript config specific to building the app (extends tsconfig.json).
+package.json         - Lists npm dependencies (Angular packages) and CLI scripts (start, build, test).
+src/main.ts           - Entry point of the app; bootstraps the root component (Angular 17+/20 standalone style).
+src/app/app.config.ts - Standalone app config (replaces app.module.ts) — registers providers like router.
+src/app/app.ts        - Root component (equivalent of app.component.ts in older Angular versions).
+src/index.html        - The single HTML page the whole SPA is injected into (<app-root> tag lives here).
+
+NOTE: This project was generated with Angular CLI 21, which now names the root
+component files app.ts / app.html / app.css instead of app.component.ts/.html/.css,
+and uses app.config.ts (standalone) instead of app.module.ts — this is expected
+and matches the "standalone API" behavior mentioned in the lab hint.
+
+Task 1, Step 4 (ng build):
+dist/student-course-portal/browser/ contains the compiled output.
+main-XXXXX.js is the file with the compiled application code (all TS/HTML/CSS bundled + minified).
+index.html in dist/ is the shell that loads main.js.
+
+Task 1, Step 5 (angular.json budgets, under production config):
+"maximumWarning": "500kB"  -> CLI prints a build WARNING if the initial bundle exceeds 500kB.
+"maximumError": "1MB"      -> CLI FAILS the build if the initial bundle exceeds 1MB.
+These protect against shipping an oversized JS bundle to production.

@@ -1,0 +1,60 @@
+.field {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+label {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.checkbox-field label {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+input,
+select {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 2px;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+button {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+/* Angular auto-applies ng-valid/ng-invalid + ng-touched/ng-untouched to
+   every form control based on validation and interaction state. */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+  border-color: green;
+}
+
+.dynamic-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}

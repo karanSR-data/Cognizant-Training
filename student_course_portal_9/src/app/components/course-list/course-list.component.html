@@ -1,0 +1,15 @@
+<div class="page">
+  <h1>Courses (NgRx Store)</h1>
+
+  <p class="status" *ngIf="loading$ | async">Loading courses…</p>
+  <p class="error" *ngIf="error$ | async as error">{{ error }}</p>
+
+  <!-- Step 96: render via the async pipe - it subscribes/unsubscribes
+       for us and always shows the latest memoised selector value -->
+  <div *ngFor="let course of courses$ | async">
+    <app-course-card
+      [course]="course"
+      [enrolled]="(enrolledIds$ | async)?.includes(course.id) ?? false"
+    ></app-course-card>
+  </div>
+</div>

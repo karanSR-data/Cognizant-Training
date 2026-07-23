@@ -1,0 +1,7 @@
+<div class="notification-panel">
+  <p class="instance-id">Instance ID: {{ instanceId }}</p>
+  <button (click)="addSample()">Add Notification</button>
+  <ul>
+    <li *ngFor="let msg of messages">{{ msg }}</li>
+  </ul>
+</div>

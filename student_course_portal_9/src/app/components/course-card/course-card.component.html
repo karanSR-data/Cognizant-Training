@@ -1,0 +1,12 @@
+<div class="card">
+  <div>
+    <strong>{{ course.title }}</strong>
+    <span> — {{ course.instructor }} ({{ course.credits }} credits)</span>
+  </div>
+
+  <!-- Step 100: label flips based on whether this course's id is in
+       the enrolledIds$ selector's current emission -->
+  <button (click)="toggleEnrollment()">
+    {{ enrolled ? 'Unenroll' : 'Enroll' }}
+  </button>
+</div>

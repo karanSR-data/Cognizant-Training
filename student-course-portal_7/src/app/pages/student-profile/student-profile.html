@@ -1,0 +1,16 @@
+<h2>Student Profile</h2>
+
+<h3>Enrolled Courses</h3>
+<ul *ngIf="enrolledCourses.length > 0; else noEnrollments">
+  <li *ngFor="let course of enrolledCourses">
+    {{ course.name }} ({{ course.code }}) — {{ course.credits }} credits
+  </li>
+</ul>
+
+<ng-template #noEnrollments>
+  <p>No courses enrolled yet. Head to the Courses page to enroll.</p>
+</ng-template>
+
+<h3>Notifications (each panel has its own isolated NotificationService instance)</h3>
+<app-notification></app-notification>
+<app-notification></app-notification>

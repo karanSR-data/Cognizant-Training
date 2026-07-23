@@ -1,0 +1,24 @@
+<form class="course-form" [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Add a Course</h2>
+
+  <label>
+    Title
+    <input type="text" formControlName="title" placeholder="e.g. Angular Fundamentals" />
+  </label>
+
+  <label>
+    Instructor
+    <input type="text" formControlName="instructor" placeholder="e.g. Priya Sharma" />
+  </label>
+
+  <label>
+    Credits
+    <input type="number" formControlName="credits" min="0" />
+  </label>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <button type="submit" [disabled]="submitting">
+    {{ submitting ? 'Saving…' : 'Add Course' }}
+  </button>
+</form>

@@ -1,0 +1,11 @@
+<div class="page">
+  <h1>Courses</h1>
+
+  <!-- Step 110: queried via .loading-indicator in the MockStore test -->
+  <p class="loading-indicator" *ngIf="loading$ | async">Loading courses…</p>
+  <p class="error" *ngIf="error$ | async as error">{{ error }}</p>
+
+  <div *ngFor="let course of courses$ | async">
+    <app-course-card [course]="course"></app-course-card>
+  </div>
+</div>

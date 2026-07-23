@@ -1,0 +1,20 @@
+{
+  "courses": [
+    { "id": 1, "title": "Angular Fundamentals", "instructor": "Priya Sharma", "credits": 4 },
+    { "id": 2, "title": "RxJS Deep Dive", "instructor": "Rahul Verma", "credits": 3 },
+    { "id": 3, "title": "TypeScript Essentials", "instructor": "Ananya Rao", "credits": 2 },
+    { "id": 4, "title": "State Management with NgRx", "instructor": "Karan Mehta", "credits": 0 }
+  ],
+  "students": [
+    { "id": 1, "name": "Aditi Singh", "email": "aditi.singh@example.com", "courseId": 1 },
+    { "id": 2, "name": "Rohan Gupta", "email": "rohan.gupta@example.com", "courseId": 1 },
+    { "id": 3, "name": "Sneha Patil", "email": "sneha.patil@example.com", "courseId": 2 },
+    { "id": 4, "name": "Vikram Nair", "email": "vikram.nair@example.com", "courseId": 3 }
+  ],
+  "enrollments": [
+    { "id": 1, "studentId": 1, "courseId": 1, "enrolledOn": "2026-01-10" },
+    { "id": 2, "studentId": 2, "courseId": 1, "enrolledOn": "2026-01-12" },
+    { "id": 3, "studentId": 3, "courseId": 2, "enrolledOn": "2026-02-01" },
+    { "id": 4, "studentId": 4, "courseId": 3, "enrolledOn": "2026-02-15" }
+  ]
+}

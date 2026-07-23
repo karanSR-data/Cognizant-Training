@@ -1,0 +1,29 @@
+<h2>Available Courses</h2>
+
+<input
+  [(ngModel)]="searchTerm"
+  (ngModelChange)="onSearchChange()"
+  placeholder="Search courses (updates URL query param)..." />
+
+<p *ngIf="isLoading">Loading courses...</p>
+
+<ng-container *ngIf="!isLoading">
+  <ng-container *ngIf="courses.length > 0; else noCourses">
+    <div
+      *ngFor="let course of courses; let i = index; trackBy: trackByCourseId"
+      (click)="goToDetail(course.id)"
+      class="clickable-card">
+      <app-course-card
+        [course]="course"
+        appHighlight="lightblue"
+        (enrollRequested)="onEnroll($event)">
+      </app-course-card>
+    </div>
+  </ng-container>
+
+  <ng-template #noCourses>
+    <p>No courses available.</p>
+  </ng-template>
+</ng-container>
+
+<p *ngIf="selectedCourseId">Selected course ID: {{ selectedCourseId }}</p>
